@@ -1,8 +1,9 @@
+"""
+calculate number of times the word is used.
+"""
 import argparse
 import sys
 import os.path
-import collections
-import time
 
 #  dictionary to hold data
 hTable = {}
