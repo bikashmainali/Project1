@@ -53,7 +53,7 @@ def readfile(file):
         sys.stderr.write("Error: " + file + " does not exist!\n")
         sys.exit(1)
 
-
+dgdg
 def showPlot(file):
     """
     show plot to the user
