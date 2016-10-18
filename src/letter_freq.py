@@ -54,12 +54,9 @@ def readfile(file):
         sys.exit(1)
 
 
-def showPlot(xlabel, ylabel,title, table):
+def showPlot(file):
     """
-    show polt to the user
-    :param xlabel: xlabel to print
-    :param ylabel: ylabel to print
-    :param title: title
+    show plot to the user
     :param table: table to get data from
     :return: None
     """
@@ -67,9 +64,9 @@ def showPlot(xlabel, ylabel,title, table):
     val = []
     key = []
     #  sort table by keys and iterate over it.
-    for x in sorted(table.keys()):
+    for x in sorted(htable.keys()):
         #  add value to the val array
-        val.append(table[x])
+        val.append(htable[x])
         #  add value to the key array
         key.append(x)
     #  convert that array to tuple
@@ -77,13 +74,15 @@ def showPlot(xlabel, ylabel,title, table):
     #  convert that array to tuple
     k = tuple(key)
     # make x with range of table
-    plt.xticks(range(len(table)), k)
+    plt.xticks(range(len(htable)), k)
     # call bar function
-    plt.bar(range(len(table)),v,width=0.9, bottom= None, hold=None, data=None,align='center')
+
+    plt.bar(range(len(htable)),v,width=0.9, bottom= None, hold=None, data=None,align='center')
     # ylable value added
-    plt.ylabel(ylabel)
-    plt.xlabel(xlabel)
-    plt.title(title)
+    plt.ylabel("Frequency")
+    plt.xlabel("Letter")
+    t = file.split('/')
+    plt.title("Letter Frequencies: " + str(t[1]))
     # show plot
     plt.show()
 
@@ -118,7 +117,7 @@ def main():
             print(c + ": " + str(htable[c]) )
     # if user request to plot, plot the graph
     if args.plot:
-        showPlot("Letter", "Frequency", 'Letter Frequencies: '+ args.filename,htable)
+        showPlot(args.filename)
 
 # call main function
 if __name__ == '__main__':

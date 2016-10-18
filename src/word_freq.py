@@ -108,6 +108,12 @@ def printword(wor, filename):
         sys.exit(1)
 
 def plot(word, file):
+    """
+    plot all data in file and plot specific word in that is given by the user
+    :param word: word to print
+    :param file: filename to print on top
+    :return: NONE
+    """
     #  array to store key and value
     x = []
     y = []
@@ -125,7 +131,8 @@ def plot(word, file):
     # print word in special place
     plt.text(int(hTable[word].rank) + 0.1 * int(hTable[word].rank),
              int(hTable[word].count) + 0.3 * int(hTable[word].count), word)
-    plt.title("word frequency: " + file)
+    t = file.split('/')
+    plt.title("word frequency: " + t[1])
     plt.ylabel("Total number of occurrences")
     plt.xlabel("Rank of word (\"" + word + "\" is rank " + str(hTable[word].rank) + ")")
     #  code to adjust plot
