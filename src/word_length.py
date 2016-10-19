@@ -6,6 +6,7 @@ import sys
 import os
 import matplotlib.pyplot as plt
 
+
 class Word:
     """
     define word that class that can store numberOfWord and total wordlength
@@ -60,7 +61,6 @@ def readfle(file):
         for line in open(file):
             #  split data in ','
             data = line.split(", ")
-            ///
             # if year in table
             if data[1] in hTable.keys():
                 # calculate new count by passing new word count and previous word count
@@ -81,6 +81,7 @@ def readfle(file):
     else:  # print("Error: " + file + " does not exist!\n")
         sys.stderr.write("Error: " + file + " does not exist!\n")
         sys.exit(1)
+
 
 def plotgraph(args):
     """
@@ -140,9 +141,10 @@ def main():
             else:
                 print(str(x) + " : 0")
 
-    #if user request plot
+    # if user request plot
     if args.plot:
         plotgraph(args)
+
 
 # call main function
 if __name__ == '__main__':
