@@ -6,7 +6,6 @@ import sys
 import os
 import matplotlib.pyplot as plt
 
-
 class Word:
     """
     define word that class that can store numberOfWord and total wordlength

@@ -6,7 +6,7 @@ import sys
 import os
 import operator
 import matplotlib.pyplot as plt
-#  to store data htable
+#  to store data hash table
 hTable = {}
 
 # word class
