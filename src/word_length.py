@@ -37,6 +37,7 @@ def file():
     read user input from the console
     :return: return all the argument passed by the user.
     """
+    # create argument parser object
     parser = argparse.ArgumentParser()
     parser.add_argument("start", help="the starting year range", type=int)
     parser.add_argument("end", help="the ending year range", type=int)
