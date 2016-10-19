@@ -7,7 +7,7 @@ import os.path
 import string
 import matplotlib.pyplot as plt
 
-
+# dictionary to hold data
 htable = dict()
 # character from a to z.
 chr = list(string.ascii_lowercase)
