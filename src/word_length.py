@@ -60,6 +60,7 @@ def readfle(file):
         for line in open(file):
             #  split data in ','
             data = line.split(", ")
+            ///
             # if year in table
             if data[1] in hTable.keys():
                 # calculate new count by passing new word count and previous word count
