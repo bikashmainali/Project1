@@ -1,3 +1,5 @@
-# Project1
+# Zipfs law
 There are different programs which perform different task.
-# to run this program you need pyplot and python installed in your computer.
+# to run 
+you need pyplot and python installed in your computer.
+and just enter python programname run
